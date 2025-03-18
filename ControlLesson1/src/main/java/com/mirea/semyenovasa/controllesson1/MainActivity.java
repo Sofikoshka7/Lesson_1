@@ -1,6 +1,8 @@
 package com.mirea.semyenovasa.controllesson1;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 
@@ -22,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         TextView myTextView = (TextView) findViewById(R.id.textView);
         myTextView.setText("New text in MIREA");
 
+        Button button = findViewById(R.id.button);
+        button.setText("MireaButton");
+
+        CheckBox checkBox = findViewById(R.id.checkBox);
+        checkBox.setChecked(true);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -29,4 +36,5 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
 }
